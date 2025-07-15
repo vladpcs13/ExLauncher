@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExLauncher</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1e3a8a, #4c1d95);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Arial', sans-serif;
+    }
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    .navbar {
+      z-index: 10;
+      background: rgba(17, 24, 39, 0.8);
+      backdrop-filter: blur(10px);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      width: 100%;
+      position: fixed;
+      top: 0;
+    }
+    .window {
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(5px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: calc(100% - 4rem);
+      max-width: 1200px;
+      margin: 6rem 2rem 2rem 2rem;
+      padding: 3rem;
+      text-align: center;
+      color: white;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      min-height: 600px;
+    }
+    .install-btn {
+      background: linear-gradient(90deg, #3b82f6, #7c3aed);
+      padding: 0.75rem 2rem;
+      border-radius: 9999px;
+      color: white;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+    .install-btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <div class="navbar">
+    <h1 class="text-2xl font-bold">ExLauncher - Удобнее чем никогда!</h1>
+  </div>
+  <div class="window">
+    <h2 class="text-3xl font-bold mb-4">ExLauncher</h2>
+    <p class="text-lg mb-6">
+      ExLauncher — это <span class="font-semibold">быстрый</span>, 
+      <span class="font-semibold">удобный</span> и 
+      <span class="font-semibold">надежный</span> лаунчер для Minecraft, созданный для настоящих фанатов игры! 
+      С ExLauncher вы сможете мгновенно запускать любую версию Minecraft, легко управлять модами, текстурами и шейдерами, а также настраивать игровой процесс под себя. 
+      Оптимизированный для минимального потребления ресурсов, он обеспечивает плавную работу даже на слабых устройствах. 
+      Поддержка серверов, автоматическое обновление и интуитивный интерфейс делают ExLauncher идеальным выбором для комфортной игры в Minecraft. 
+      Погрузитесь в мир блоков с лаунчером, созданным с заботой о каждом игроке!
+    </p>
+    <p class="text-md mb-6">Создатель: <span class="font-semibold">exp13 (vladpcs13)</span></p>
+    <a href="https://drive.google.com/file/d/1Vj_a3GWh16nx3hPOzwX_rT2NTO4gSV9a/view?usp=sharing" 
+       target="_blank" 
+       class="install-btn inline-block">
+      Установить!
+    </a>
+  </div>
+
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": true,
+          "anim": {
+            "enable": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "repulse": {
+            "distance": 100,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>
