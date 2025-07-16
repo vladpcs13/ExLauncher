@@ -9,9 +9,9 @@
   <style>
     body {
       margin: 0;
-      overflow: hidden;
+      overflow: auto;
       background: linear-gradient(135deg, #1e3a8a, #4c1d95);
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       font-family: 'Arial', sans-serif;
@@ -33,15 +33,21 @@
       position: fixed;
       top: 0;
     }
-    .window {
+    .window-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 6rem 2rem 2rem 2rem;
       z-index: 10;
+    }
+    .window {
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(5px);
       border-radius: 16px;
       border: 1px solid rgba(255, 255, 255, 0.2);
-      width: calc(100% - 4rem);
-      max-width: 1200px;
-      margin: 6rem 2rem 2rem 2rem;
+      width: calc(50% - 3rem);
+      max-width: 580px;
       padding: 3rem;
       text-align: center;
       color: white;
@@ -59,6 +65,11 @@
     .install-btn:hover {
       transform: scale(1.05);
     }
+    @media (max-width: 768px) {
+      .window {
+        width: calc(100% - 4rem);
+      }
+    }
   </style>
 </head>
 <body>
@@ -66,23 +77,45 @@
   <div class="navbar">
     <h1 class="text-2xl font-bold">ExLauncher - Удобнее чем никогда!</h1>
   </div>
-  <div class="window">
-    <h2 class="text-3xl font-bold mb-4">ExLauncher</h2>
-    <p class="text-lg mb-6">
-      ExLauncher — это <span class="font-semibold">быстрый</span>, 
-      <span class="font-semibold">удобный</span> и 
-      <span class="font-semibold">надежный</span> лаунчер для Minecraft, созданный для настоящих фанатов игры! 
-      С ExLauncher вы сможете мгновенно запускать любую версию Minecraft, легко управлять модами, текстурами и шейдерами, а также настраивать игровой процесс под себя. 
-      Оптимизированный для минимального потребления ресурсов, он обеспечивает плавную работу даже на слабых устройствах. 
-      Поддержка серверов, автоматическое обновление и интуитивный интерфейс делают ExLauncher идеальным выбором для комфортной игры в Minecraft. 
-      Погрузитесь в мир блоков с лаунчером, созданным с заботой о каждом игроке!
-    </p>
-    <p class="text-md mb-6">Создатель: <span class="font-semibold">exp13 (vladpcs13)</span></p>
-    <a href="https://drive.google.com/file/d/1Vj_a3GWh16nx3hPOzwX_rT2NTO4gSV9a/view?usp=sharing" 
-       target="_blank" 
-       class="install-btn inline-block">
-      Установить!
-    </a>
+  <div class="window-container">
+    <div class="window">
+      <h2 class="text-3xl font-bold mb-4">ExLauncher v2 Stable</h2>
+      <p class="text-lg mb-6">
+        ExLauncher — это <span class="font-semibold">быстрый</span>, 
+        <span class="font-semibold">удобный</span> и 
+        <span class="font-semibold">надежный</span> лаунчер для Minecraft, созданный для настоящих фанатов игры! 
+        С ExLauncher вы сможете мгновенно запускать любую версию Minecraft, легко управлять модами, текстурами и шейдерами, а также настраивать игровой процесс под себя. 
+        Оптимизированный для минимального потребления ресурсов, он обеспечивает плавную работу даже на слабых устройствах. 
+        Поддержка серверов, автоматическое обновление и интуитивный интерфейс делают ExLauncher идеальным выбором для комфортной игры в Minecraft. 
+        Погрузитесь в мир блоков с лаунчером, созданным с заботой о каждом игроке!
+      </p>
+      <p class="text-md mb-6">Создатель: <span class="font-semibold">exp13 (vladpcs13)</span></p>
+      <a href="https://drive.google.com/file/d/1Vj_a3GWh16nx3hPOzwX_rT2NTO4gSV9a/view?usp=sharing" 
+         target="_blank" 
+         class="install-btn inline-block">
+        Установить!
+      </a>
+    </div>
+    <div class="window">
+      <h2 class="text-3xl font-bold mb-4">ExLauncher v3 Beta</h2>
+      <p class="text-lg mb-6">
+        ExLauncher v3 Beta — это <span class="font-semibold">быстрый</span>, 
+        <span class="font-semibold">удобный</span> и 
+        <span class="font-semibold">надежный</span> лаунчер для Minecraft, созданный для настоящих фанатов игры! 
+        Новая бета-версия включает <span class="font-semibold">вкладку модов</span> для еще более удобного управления вашими модификациями. 
+        С ExLauncher v3 вы сможете мгновенно запускать любую версию Minecraft, легко управлять модами, текстурами и шейдерами, а также настраивать игровой процесс под себя. 
+        Оптимизированный для минимального потребления ресурсов, он обеспечивает плавную работу даже на слабых устройствах. 
+        Поддержка серверов, автоматическое обновление и интуитивный интерфейс делают ExLauncher идеальным выбором для комфортной игры в Minecraft. 
+        <span class="font-semibold text-red-300">Обратите внимание: это бета-версия, поэтому возможны баги.</span> 
+        Погрузитесь в мир блоков с лаунчером, созданным с заботой о каждом игроке!
+      </p>
+      <p class="text-md mb-6">Создатель: <span class="font-semibold">exp13 (vladpcs13)</span></p>
+      <a href="https://drive.google.com/file/d/16E8Aq_ukrJARHJNpAO0tlVf1ybPd0wRh/view?usp=sharing" 
+         target="_blank" 
+         class="install-btn inline-block">
+        Установить!
+      </a>
+    </div>
   </div>
 
   <script>
